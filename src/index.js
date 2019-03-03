@@ -1,36 +1,16 @@
-import AuthModule from './store/auth_export';
-
-import LoginPopupSupport from './services/login_popup_support';
+import BreadcrumbsStoreModule from './store/breadcrumbs';
 
 
-const PopupAuthModule = {
+const BreadcrumbsModule = {
     install(Vue, {
         store,
-        authStateURL,
-        authLoginURL,
-        authLogoutURL,
-        popupBlockedCallback,
-        iframeCreator,
     }) {
 
-        Vue.use(LoginPopupSupport, { popupBlockedCallback, iframeCreator, loginURL: authLoginURL });
-
-        const authModule = new AuthModule({
+        Vue.prototype.breadcrumbs$ = new BreadcrumbsStoreModule({
             store,
-            name: 'auth',
+            name: 'breadcrumbs',
         });
-
-        authModule.setAuthStateURL(authStateURL);
-        authModule.setAuthLogoutURL(authLogoutURL);
-
-        Vue.prototype.auth$ = authModule;
-
-        Vue.prototype.loginPopup$.addListener(authModule.getLoginState, false);
     },
 };
 
-export {
-    LoginPopupSupport,
-};
-
-export default PopupAuthModule;
+export default BreadcrumbsModule;
