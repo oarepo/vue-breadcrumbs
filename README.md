@@ -6,7 +6,7 @@ by router changes.
 ## Installation
 
 ```
-yarn add @cesnet/vue-breadcrumbs
+yarn add @oarepo/vue-breadcrumbs
 ```
 
 ## Usage
