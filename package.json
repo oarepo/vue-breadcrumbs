@@ -4,7 +4,8 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "npx babel src --out-dir dist"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist; bili --plugins.vue --format esm && cp package.json dist/"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.3.0",
@@ -14,14 +15,38 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "babel-preset-vue": "^2.0.2",
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.14.0",
     "eslint-plugin-cypress": "^2.2.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-vue": "^5.2.2"
-  }
+    "eslint-plugin-vue": "^5.2.2",
+    "bili": "^4.8.0",
+    "rollup-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "description": "This library provides a generic vuex-based mechanism for handling breadcrumbs automatically  by router changes.",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oarepo/vue-breadcrumbs.git"
+  },
+  "keywords": [
+    "breadcrumbs",
+    "vuejs",
+    "quasar",
+    "vuex"
+  ],
+  "author": "Miroslav Simek, CIS UCT Prague",
+  "bugs": {
+    "url": "https://github.com/oarepo/vue-breadcrumbs/issues"
+  },
+  "homepage": "https://github.com/oarepo/vue-breadcrumbs#readme"
 }
