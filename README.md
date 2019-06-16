@@ -1,5 +1,11 @@
 # Breadcrumbs in VueJS/Quasar
 
+[![NPM version][npm-svg]][npm]
+
+   [npm]: https://www.npmjs.com/package/@oarepo/vue-breadcrumbs
+   [npm-svg]: https://img.shields.io/npm/v/@oarepo/vue-breadcrumbs.svg?style=flat
+
+
 This library provides a generic vuex-based mechanism for handling breadcrumbs automatically 
 by router changes.
 
